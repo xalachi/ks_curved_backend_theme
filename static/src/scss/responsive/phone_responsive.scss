@@ -1,0 +1,239 @@
+//Phone View
+@media screen and (max-width: 767px) {
+    body.o_web_client {
+        .o_content {
+            background-color: transparent;
+        }
+        .o_kanban_view.o_kanban_ungrouped {
+            padding: 0 12px !important;
+            .o_kanban_record {
+                margin: 4px 0px;
+            }
+        }
+        .o_notebook {
+            .o_kanban_view.o_kanban_ungrouped {
+                padding: 0 !important;
+            }
+        }
+    }
+    //End body Spaceing
+    //App Drawer
+    .ks_appsmenu_active {
+        .o_menu_apps {
+            .dropdown-menu.ks_appdrawer_div {
+                max-height: calc(100vh - 120px);
+            }
+        }
+    }
+    .o_menu_apps {
+        .dropdown-menu.ks_appdrawer_div {
+            .ks_user_pic {
+                img {
+                    height: 76px;
+                }
+                .ks_user_name {
+                    font-size: 1.25rem;
+                }
+            }
+            .ks_menu_search {
+                max-width: 300px;
+                margin: 0 auto;
+            }
+            .ks-search-values .ks_o_apps {
+                .dropdown-item {
+                    max-width: calc(100% / 3);
+                    padding: 1rem !important;
+                    .o-app-name {
+                        max-width: 80px;
+                    }
+                }
+            }
+            .ks_appdrawer-tab-content {
+                .ks_appdrawer_panel {
+                    &.tabContent {
+                        display: block;
+                        .item {
+                            display: flex !important;
+                        }
+                    }
+                    .ks_appdrawer_inner_app_div {
+                        padding: 0 14px;
+                        .dropdown-item {
+                            max-width: calc(100% / 3);
+                            padding: 1rem !important;
+                            .o-app-name {
+                                max-width: 70px;
+                            }
+                        }
+                    }
+                }
+            }
+            .apps-drawer-nav {
+                display: none !important;
+            }
+        }
+    }
+    .ks-tabs {
+        display: none;
+    }
+    //end App Drawer
+    //Table
+    html {
+        .o_web_client {
+            >.o_action_manager {
+                >.o_action {
+                    >.o_content {
+                        margin: 0;
+                        border-radius: 0;
+                        >div:not(.o_kanban_view) {
+                            position: relative;
+                            // overflow-y: auto;
+                            // width: fit-content;
+                            .table-responsive {
+                                overflow-x: auto;
+                                .table {
+                                    .o_optional_columns_dropdown_toggle {
+                                        display: none;
+                                    }
+                                }
+                            }
+                        }
+                        // pivot
+                        .o_pivot {
+                            height: 100%;
+                            padding: 16px;
+                            width: fit-content;
+                            min-width: 100%;
+                            overflow-y: auto;
+                            // overflow: auto;
+                            .dropdown-item.o_pivot_field_selection {
+                                &:hover {
+                                    &::after {
+                                        transform: rotate(90deg);
+                                    }
+                                }
+                                ~ {
+                                    .dropdown-menu {
+                                        position: static;
+                                        box-shadow: none;
+                                        width: 100%;
+                                        border: none;
+                                    }
+                                }
+                            }
+                        }
+                        //Attendance App
+                        .o_hr_attendance_kiosk_mode_container {
+                            height: 100%;
+                            .o_hr_attendance_kiosk_mode {
+                                .o_hr_attendance_user_badge {
+                                    background: none;
+                                }
+                            }
+                        }
+                        .o_form_view {
+                            //status bar
+                            .o_form_statusbar {
+                                .o_statusbar_status {
+                                    .dropdown-menu {
+                                        .btn {
+                                            background: none;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                //Discuss App
+                .o_widget_Discuss {
+                    .o_Discuss {
+                        &.o-mobile {
+                            background-color: var(--background);
+                            &:not(.o-adding-item) {
+                                border-color: var(--sm-input-border);
+                            }
+                        }
+                        .o_NotificationList {
+                            .o_ThreadPreview.o-muted {
+                                background-color: var(--kanban-bordercolor);
+                            }
+                            .o_NotificationList_separator {
+                                border-color: var(--list-bordercolor);
+                            }
+                        }
+                    }
+                    .o_MobileMessagingNavbar {
+                        background-color: var(--background);
+                        box-shadow: 0 0 8px var(--drk-border);
+                        .o_MobileMessagingNavbar_tab {
+                            box-shadow: 1px 0 0 var(--drk-border);
+                            &.o-active {
+                                color: var(--primary);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .table {
+        thead {
+            tr {
+                th {
+                    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.06);
+                    padding: 8px 0;
+                    &:first-child,
+                    &:last-child {
+                        border-radius: 0px;
+                    }
+                }
+            }
+        }
+    }
+    //End Table
+    // calendar view
+    .o_calendar_buttons {
+        .o_calendar_navigation_buttons {
+            .o_calendar_button_today {
+                span {
+                    display: none;
+                }
+                svg {
+                    display: block;
+                    path,
+                    line {
+                        stroke: #fff;
+                    }
+                }
+            }
+        }
+        .o_calendar_scale_buttons {
+            .btn-group {
+                .btn {
+                    padding: 0 2px;
+                    background: none !important;
+                }
+            }
+        }
+        .btn-time-off,
+        .btn-allocation {
+            margin-top: 4px;
+        }
+    }
+    //Phone view channal message
+    .o_ChatWindowManager {
+        .o_Composer_actionButtons.o-composer-is-compact {
+            background: var(--background);
+        }
+    }
+    .o_dropdown_menu{
+      max-width: 150px;
+      li{
+        a{
+          white-space: normal;
+          padding: 3px 10px !important;
+        }
+      }
+    }
+}

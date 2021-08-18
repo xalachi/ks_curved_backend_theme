@@ -1,0 +1,20 @@
+.ks-right-content{
+	 display: flex;
+	 align-items: flex-start;
+	 border-color: var(--drk-border);
+}
+ .ks-right-content.o_form_view .o_form_sheet_bg {
+	 width: 60%;
+	 border-bottom: none;
+	 border-color: var(--drk-border);
+	 border-width: 1px;
+}
+ .ks-right-content.o_form_view .o_form_sheet_bg .o_form_sheet {
+	 margin: 16px;
+}
+ .ks-right-content.o_form_view .o_form_sheet_bg .o_statusbar_status {
+	 margin-right: 2px;
+}
+ .ks-right-content.o_form_view .o_FormRenderer_chatterContainer {
+	 width: 40%;
+}
